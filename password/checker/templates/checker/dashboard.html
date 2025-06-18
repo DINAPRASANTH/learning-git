@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'checker/style.css' %}">
+</head>
+<body>
+    <div class="dashboard-box">
+        <h2>Welcome, {{ request.user.username }}</h2>
+        <p>You're now logged in.</p>
+
+        <div class="profile-info">
+            <label>First Name:</label>
+            <p>{{ profile.first_name }}</p>
+
+            <label>Last Name:</label>
+            <p>{{ profile.last_name }}</p>
+
+            <label>Club Name:</label>
+            <p>{{ profile.clubname }}</p>
+
+            <label>Position:</label>
+            <p>{{ profile.position }}</p>
+
+            <label>Description:</label>
+            <p>{{ profile.description }}</p>
+        </div>
+
+        <div class="actions">
+            <a href="{% url 'edit_profile' %}">Edit Profile</a>
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

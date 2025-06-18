@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complete Profile</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Complete Your Profile</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="first_name" placeholder="First Name" required><br>
+            <input type="text" name="last_name" placeholder="Last Name" required><br>
+            <input type="text" name="clubname" placeholder="Club Name" required><br> 
+            <input type="text" name="position" placeholder="Position" required><br>
+            <textarea name="description" placeholder="Description..." rows="4" style="width: 100%;" required></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+</body>
+</html>

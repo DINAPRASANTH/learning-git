@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="{% static 'checker/style.css' %}">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Edit Your Profile</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="first_name" value="{{ profile.first_name }}" required><br>
+            <input type="text" name="last_name" value="{{ profile.last_name }}" required><br>
+            <input type="text" name="clubname" value="{{ profile.clubname }}" required><br>
+            <input type="text" name="position" value="{{ profile.position }}" required><br>
+            <textarea name="description" rows="4" style="width: 100%;" required>{{ profile.description }}</textarea><br>
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</body>
+</html>

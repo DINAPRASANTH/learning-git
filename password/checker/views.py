@@ -84,3 +84,5 @@ def home(request):
     return render(request, 'checker/dashboard.html') 
 
 #Added this line to see the remote changes on the repo
+#learning working of branching
+

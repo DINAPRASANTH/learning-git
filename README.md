@@ -1,1 +1,3 @@
-#Master branch modified this line
+<<<<<<< HEAD
+#both the branch and mater succ3essfully changed the def
+>>>>>>> feature-a
